@@ -42,7 +42,7 @@ p {
 
 article {
     position: absolute; 
-    bottom: 200px; 
+    bottom: 100px; 
     left: 400px; 
     background-color: rgba(0, 0, 0, 0.5); 
     padding: 100px; 
@@ -57,7 +57,7 @@ article img {
     height: auto;
 }
 
-.sociallink {
+a.textdecoration{
     text-decoration: none;
 }
 
