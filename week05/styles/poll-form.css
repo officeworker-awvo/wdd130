@@ -1,0 +1,103 @@
+:root{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    background-color: #FFFDF2;
+    color: black;
+}
+
+header {
+    margin: 0 auto;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h1 {
+    padding: 5px;
+    margin: 1px;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    border: 5px dotted black ;
+    border-radius: 1px;
+    background-color: #FFFDF2;
+    display: grid;
+}
+
+fieldset {
+    display: grid;
+    grid-gap: 5px;
+    margin: 1px;
+    padding: 1rem;
+    border: none;
+}
+
+legend {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: underline 5px;
+}
+
+label {
+    text-align: center;
+    padding-right: 1rem;
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+button[type="submit"] {
+    margin: 10px;
+    padding: 8px;
+    background-color: #FFFDF2; 
+    cursor: pointer;
+    border: 3px solid black;
+    box-shadow: 2px 2px 0 0 white,
+    4px 4px 0 0 black;
+    transition-duration: 200ms;
+    font-size: bold;
+}
+
+button:hover {
+    background-color: #d6d5c8;
+    box-shadow: 3px 3px 0 0 white,
+    6px 6px 0 0 black;
+    transform: translate(-2px, -2px);
+}
+
+footer {
+    text-align: center;
+}
+
+.form-item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.column1 {
+    grid-template-columns: 1fr 2fr;
+    margin: 0.5rem 0;
+}
+
+.column2 {
+    grid-template-columns: 1fr 2fr;
+}

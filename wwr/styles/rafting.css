@@ -6,30 +6,27 @@
     background-color: var(--primary-color)
 }
 
-h1 {
+* {
     font-family: "Libre Franklin", serif;
-    color: var(--primary-color);
+}
+
+h1 {
+    color: var(--secondary-color);
     font-weight: 600;
-    position: absolute; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    margin: 1rem;
     padding: 20px; 
-    top: 20px; 
-    left: 800px; 
 }
 
 h2 {
-    font-family: "Libre Franklin", serif;
     color: var(--secondary-color);
     font-weight: 600;
 }
 
 p {
-    font-family: "Libre Franklin", serif;
     color: var(--secondary-color);
 }
 
 .articleflex main div {
-    font-family: "Libre Franklin", serif;
     background-image: url('../images/hero.webp');
     background-size: cover;
     background-position: center;
@@ -46,7 +43,6 @@ p {
 }
 
 main div h3 {
-    font-family: "Libre Franklin", serif;
     color: var(--secondary-color);
     font-weight: 600;
     font-size: 2rem;
@@ -171,15 +167,14 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    list-style-type: none;
+    list-style: none;
     width: auto;
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     flex-wrap: nowrap;
 }
 
 .navflexbox a {
-    font-family: "Libre Franklin", serif;
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
@@ -197,6 +192,27 @@ nav {
 	color: tomato;
 	font-weight: 700;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav {
+        grid-template-columns: 1fr;     
+    }
+
+    .navflexbox {
+        flex-direction: column;      
+        gap: 20px;                   
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+    .navflexbox a {
+        font-size: 1.2rem;           
+    }
 }
 
 .history {
@@ -273,7 +289,6 @@ nav {
 }
 
 .caption {
-    font-family: "Libre Franklin", serif;
     font-size: 18px;
     color: var(--secondary-color);
     margin-top: 5px; 
@@ -282,7 +297,6 @@ nav {
 .gallery h2 {
     grid-column: 1 / -1; 
     margin-bottom: 20px; 
-    font-family: "Libre Franklin", serif;
     font-size: 2rem;
     font-weight: 600;
     color: var(--secondary-color);
@@ -290,7 +304,6 @@ nav {
 }
 
 .header {
-    font-family: "Libre Franklin", serif;
     font-size: 2rem;
     font-weight: 600; 
     margin-top: -5px;
@@ -298,7 +311,209 @@ nav {
 }
 
 section p {
-    font-family: "Libre Franklin", serif;
     font-weight: 500; 
     color: var(--secondary-color)  
+}
+
+.comp-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contacts {
+    margin: 0;
+    border: 3px solid #333;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 1rem; 
+    padding: -20px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.info {
+    height: 200px;
+    display: grid;
+    margin: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.info, .map {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.map iframe {
+    width: 100%; 
+    height: 100%; 
+    border: 0;
+    min-height: 300px; 
+    min-width: 400px;
+
+}
+
+.employees {
+    margin: 0;
+    border: 3px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.employee {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.employee-img {
+    height: 300px;
+    margin: 50px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px #333;
+}
+
+.caption2 {
+    width: 300px;
+    height: 70px;
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 350px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+form {
+    margin: 1rem auto;
+    border: 3px solid #333 ;
+    border-radius: 1px;
+    color: var(--secondary-color);
+    display: grid;
+    gap: 10px;
+}
+
+form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+fieldset {
+    display: grid;
+    grid-gap: 5px;
+    margin: 1px;
+    padding: 1rem;
+    border: none;
+}
+
+legend {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: start;
+    text-decoration: underline 3px;
+}
+
+label {
+    text-align: center;
+    padding-right: 1rem;
+    font-size: 1.25rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="radio"],
+textarea {
+    max-width: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    gap: 1rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+button[type="submit"] {
+    margin: 10px;
+    padding: 8px;
+    background-color: var(--secondary-color); 
+    cursor: pointer;
+    border: 3px solid black;
+    box-shadow: 2px 2px 0 0 var(--secondary-color),
+    4px 4px 0 0 black;
+    transition-duration: 200ms;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 3px 3px 0 0 white,
+    6px 6px 0 0 black;
+    transform: translate(-2px, -2px);
+}
+
+.form-item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.column1 {
+    grid-template-columns: 1fr 2fr;
+    margin: 0.5rem 0;
+
+}
+
+.radio label {
+    font-size: 1.15rem;
+}
+
+.column2 {
+    grid-template-columns: 1fr 2fr;
+}
+
+.form-item p {
+    font-size: 1.5rem; 
+    text-align: end;
+}
+
+.sociallinks {
+    color: var(--secondary-color);
+}
+
+.sociallinks:hover {
+    color: white;
 }
